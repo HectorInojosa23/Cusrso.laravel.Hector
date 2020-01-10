@@ -20,3 +20,10 @@ Route::get('foo', function () {
 });
 
 Route::get('Permiso/{nombre}/{slug?}', 'PermisoController@index');
+
+Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function()  {
+
+Route::get('Permiso', 'PermisoController@index')->name('permiso');
+Route::get('Permiso/crear', 'PermisoController@create')->name('crear_permiso');
+
+});
