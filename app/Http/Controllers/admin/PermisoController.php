@@ -30,6 +30,8 @@ class PermisoController extends Controller
     public function create()
     {
         
+        return view ('admin.Permiso.crear');
+
     }
 
     /**
